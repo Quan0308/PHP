@@ -50,9 +50,10 @@ services:
       - WORDPRESS_DB_NAME=${MYSQL_DATABASE}
       - WORDPRESS_DB_USER=${MYSQL_USER}
       - WORDPRESS_DB_PASSWORD=${MYSQL_PASSWORD}
-      - WP_DEBUG=true
+      # - WORDPRESS_DEBUG=true
     volumes:
       - ./wp-content/:/var/www/html/wp-content
+      - ./wp-includes/:/var/www/html/wp-includes
     networks:
       - wordpress-network
 
